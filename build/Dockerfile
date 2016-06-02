@@ -3,7 +3,7 @@ MAINTAINER Steve Smith <stevesmith2609@gmail.com>
 RUN apk --update add ruby-rdoc ruby-irb
 RUN gem install bundler
 ADD /unicorn /unicorn
-EXPOSE 9292
+EXPOSE 8080
 WORKDIR /unicorn
 RUN bundle install
-CMD bundle exec rackup --port 9292 --host 0.0.0.0
+CMD bundle exec rackup --port 8080 --host 0.0.0.0
